@@ -1,11 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escape verse - Escape Room Adventure Center</title>
+
+  <link rel="stylesheet" href="index.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-    <h1>younus</h1>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <span class="logo-icon"><i data-lucide="key-round"></i></span>
+      Escape verse
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#rooms">services</a></li>
+      <li><a href="#pricing">blog</a></li>
+      <li><a href="#booking">Contact</a></li>
+      <li><a href="#">Dashboard</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="rtlBtn">
+  <i data-lucide="text-direction-rtl"></i>
+</button>
+      <button class="icon-btn" id="darkBtn"><i data-lucide="moon"></i></button>
+      <a href="login.html" class="btn btn-secondary desktop-cta">Sign In</a>
+      <a href="#booking" class="btn btn-primary desktop-cta">Book Now</a>
+      
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">Premium Escape Room Adventure</span>
+      <h1>Escape Reality. <span>Unlock Mystery.</span></h1>
+      <p>
+        Step into cinematic escape rooms, solve hidden puzzles, race against time,
+        and create unforgettable memories with your team.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary">Book Your Escape</a>
+        <a href="#rooms" class="btn btn-secondary">Explore Rooms</a>
+      </div>
+    </div>
+
+    <div class="timer-card">
+      <div class="timer-inner">
+        <div class="timer" id="timer">60:00</div>
+        <p>Time Remaining</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>60 Minute Challenge</span>
+    <span>Team Adventure</span>
+    <span>Live Game Master</span>
+    <span>Premium Rooms</span>
+    <span>Birthday Events</span>
+    <span>Corporate Games</span>
+  </div>
+</div>
+
+<section class="section rooms" id="rooms">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Our Experiences</span>
+      <h2>Choose Your Mission</h2>
+      <p>Each room has a unique story, difficulty level, and mystery waiting to be solved.</p>
+    </div>
+
+    <div class="room-grid">
+      <div class="room-card">
+        <img src="https://images.unsplash.com/photo-1505635552518-3448ff116af3?auto=format&fit=crop&w=900&q=80">
+        <div class="room-content">
+          <span class="difficulty">Expert</span>
+          <h3>The Haunted Manor</h3>
+          <p>60 mins · 2–6 players</p>
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80">
+        <div class="room-content">
+          <span class="difficulty">Hard</span>
+          <h3>Secret Laboratory</h3>
+          <p>60 mins · 2–8 players</p>
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
+        <div class="room-content">
+          <span class="difficulty">Medium</span>
+          <h3>Treasure Vault</h3>
+          <p>45 mins · 2–5 players</p>
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container experience-grid">
+    <div class="exp-img">
+      <img src="https://images.unsplash.com/photo-1529516548873-9ce57c8f155e?auto=format&fit=crop&w=1000&q=80">
+    </div>
+
+    <div>
+      <span class="tag">Why Choose Us</span>
+      <h2>Not Just a Game. A Full Adventure.</h2>
+
+      <div class="feature">
+        <i data-lucide="film"></i>
+        <div>
+          <h3>Cinematic Room Design</h3>
+          <p>Every room is built with immersive lighting, props, and story-based puzzles.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <i data-lucide="brain"></i>
+        <div>
+          <h3>Smart Puzzle Flow</h3>
+          <p>Challenges are designed for teamwork, logic, observation, and quick decisions.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <i data-lucide="users"></i>
+        <div>
+          <h3>Perfect for Groups</h3>
+          <p>Great for friends, birthdays, college teams, and corporate outings.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Pricing</span>
+      <h2>Pick Your Plan</h2>
+      <p>Simple pricing for every type of adventure team.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">₹799</div>
+        <p>Per person</p>
+        <ul>
+          <li>✓ 1 Escape Room</li>
+          <li>✓ 60 Minute Game</li>
+          <li>✓ Game Master Support</li>
+          <li>✓ 3 Hint Tokens</li>
+        </ul>
+        <a href="#booking" class="btn btn-secondary">Get Started</a>
+      </div>
+
+      <div class="price-card popular">
+        <span class="badge">Popular</span>
+        <h3>Adventure</h3>
+        <div class="price">₹1299</div>
+        <p>Per person</p>
+        <ul>
+          <li>✓ 2 Escape Rooms</li>
+          <li>✓ Unlimited Hints</li>
+          <li>✓ Victory Photo</li>
+          <li>✓ Priority Booking</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Elite</h3>
+        <div class="price">₹2499</div>
+        <p>Per group</p>
+        <ul>
+          <li>✓ Private Event</li>
+          <li>✓ Dedicated Host</li>
+          <li>✓ Photos & Videos</li>
+          <li>✓ Celebration Setup</li>
+        </ul>
+        <a href="#booking" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="booking">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Reserve Now</span>
+      <h2>Book Your Adventure</h2>
+      <p>Fill the form and our team will confirm your slot.</p>
+    </div>
+
+    <div class="booking-grid">
+      <div class="booking-info">
+        <div class="info-box">
+          <i data-lucide="phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <h3>Location</h3>
+            <p>Nellore, Andhra Pradesh</p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i data-lucide="clock"></i>
+          <div>
+            <h3>Hours</h3>
+            <p>10:00 AM – 10:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="form-row">
+          <input type="tel" placeholder="Phone Number" required>
+          <select required>
+            <option value="">Choose Room</option>
+            <option>The Haunted Manor</option>
+            <option>Secret Laboratory</option>
+            <option>Treasure Vault</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <input type="date" required>
+          <select required>
+            <option value="">Players</option>
+            <option>2 Players</option>
+            <option>3 Players</option>
+            <option>4 Players</option>
+            <option>5+ Players</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Reserve My Slot</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+
+  <div class="container footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-brand">
+
+      <div class="footer-logo">
+        <span class="logo-box">E</span>
+        <h2>ESCAPE VERSE</h2>
+      </div>
+
+      <p>
+        Enter immersive worlds filled with mystery, puzzles,
+        and cinematic adventures designed for unforgettable moments.
+      </p>
+
+      <div class="footer-socials">
+        <a href="#"><i data-lucide="instagram"></i></a>
+        <a href="#"><i data-lucide="twitter"></i></a>
+        <a href="#"><i data-lucide="youtube"></i></a>
+        <a href="#"><i data-lucide="facebook"></i></a>
+      </div>
+
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-column">
+        <h3>Company</h3>
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Experiences</h3>
+
+        <a href="#">Horror</a>
+        <a href="#">Mystery</a>
+        <a href="#">Sci-Fi</a>
+        <a href="#">Adventure</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Support</h3>
+
+        <a href="#">Help Center</a>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+
+        <p>Bengaluru, India</p>
+        <p>+91 98765 43210</p>
+        <p>escape verse@gmail.com</p>
+        <p>Mon - Sun : 10AM - 11PM</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <p>© 2026 ESCAPE VERSE. All rights reserved.</p>
+
+    <div class="bottom-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Cookies</a>
+    </div>
+
+  </div>
+
+
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
