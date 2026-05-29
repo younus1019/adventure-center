@@ -9,6 +9,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -30,12 +33,15 @@
     </ul>
 
     <div class="nav-actions">
-      <button class="icon-btn" id="rtlBtn">
-  <i data-lucide="text-direction-rtl"></i>
+      <button class="icon-btn" id="darkBtn">
+  <i data-lucide="moon"></i>
 </button>
-      <button class="icon-btn" id="darkBtn"><i data-lucide="moon"></i></button>
-      <a href="login.html" class="btn btn-secondary desktop-cta">Sign In</a>
-      <a href="#booking" class="btn btn-primary desktop-cta">Book Now</a>
+
+<button class="rtl-toggle" id="rtlBtn">
+  RTL
+</button>
+    
+      <a href="#booking" class="btn btn-primary desktop-cta">login</a>
       
     </div>
   </div>
@@ -77,6 +83,35 @@
   </div>
 </div>
 
+
+<section class="section stats-section">
+
+  <div class="container stats-grid">
+
+    <div class="stat-card">
+      <h2>15K+</h2>
+      <p>Players Escaped</p>
+    </div>
+
+    <div class="stat-card">
+      <h2>12</h2>
+      <p>Immersive Rooms</p>
+    </div>
+
+    <div class="stat-card">
+      <h2>4.9★</h2>
+      <p>Customer Rating</p>
+    </div>
+
+    <div class="stat-card">
+      <h2>98%</h2>
+      <p>Success Experience</p>
+    </div>
+
+  </div>
+
+
+
 <section class="section rooms" id="rooms">
   <div class="container">
     <div class="section-head">
@@ -115,9 +150,60 @@
           <a href="#booking" class="btn btn-primary">Book Now</a>
         </div>
       </div>
+
+      <div class="room-card">
+  <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+
+  <div class="room-content">
+    <span class="difficulty">Extreme</span>
+
+    <h3>Zombie Bunker</h3>
+
+    <p>75 mins · 4–8 players</p>
+
+    <a href="#booking" class="btn btn-primary">
+      Book Now
+    </a>
+  </div>
+</div>
+
+<div class="room-card">
+  <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80">
+
+  <div class="room-content">
+    <span class="difficulty">Medium</span>
+
+    <h3>Cyber Heist</h3>
+
+    <p>50 mins · 2–6 players</p>
+
+    <a href="#booking" class="btn btn-primary">
+      Book Now
+    </a>
+  </div>
+</div>
+
+<div class="room-card">
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80">
+
+  <div class="room-content">
+    <span class="difficulty">Hard</span>
+
+    <h3>Pharaoh's Curse</h3>
+
+    <p>65 mins · 3–7 players</p>
+
+    <a href="#booking" class="btn btn-primary">
+      Book Now
+    </a>
+  </div>
+</div>
     </div>
   </div>
 </section>
+
+
+
 
 <section class="section" id="about">
   <div class="container experience-grid">
@@ -154,6 +240,98 @@
       </div>
     </div>
   </div>
+</section>
+
+
+<section class="section how-section">
+
+  <div class="container">
+
+    <div class="section-head">
+      <span class="tag">How It Works</span>
+      <h2>Your Escape Journey</h2>
+      <p>Simple steps to enter the adventure.</p>
+    </div>
+
+    <div class="how-grid">
+
+      <div class="how-card">
+        <div class="step">01</div>
+        <h3>Choose Room</h3>
+        <p>Select your mystery, horror, or adventure challenge.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="step">02</div>
+        <h3>Build Team</h3>
+        <p>Invite friends, family, or teammates for the mission.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="step">03</div>
+        <h3>Solve & Escape</h3>
+        <p>Beat the timer, solve clues, and unlock victory.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section testimonials">
+
+  <div class="container">
+
+    <div class="section-head">
+      <span class="tag">Testimonials</span>
+      <h2>What Players Say</h2>
+      <p>Experiences shared by our visitors.</p>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card">
+        <p>
+          “The horror room felt like a real movie.
+          Best experience with friends.”
+        </p>
+
+        <div class="user">
+          <h4>Rahul Verma</h4>
+          <span>★★★★★</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “Amazing puzzle flow and cinematic atmosphere.
+          Highly recommended.”
+        </p>
+
+        <div class="user">
+          <h4>Priya Reddy</h4>
+          <span>★★★★★</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          “Perfect for birthdays and team outings.
+          Premium quality experience.”
+        </p>
+
+        <div class="user">
+          <h4>Arjun Kumar</h4>
+          <span>★★★★★</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
 <section class="section pricing" id="pricing">
@@ -208,6 +386,39 @@
   </div>
 </section>
 
+<section class="section faq-section">
+
+  <div class="container">
+
+    <div class="section-head">
+      <span class="tag">FAQ</span>
+      <h2>Questions Before Entering?</h2>
+      <p>Everything you need to know before your mission.</p>
+    </div>
+
+    <div class="faq-grid">
+
+      <div class="faq-card">
+        <h3>How many players can join?</h3>
+        <p>Most rooms support 2 to 8 players comfortably.</p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Is it beginner friendly?</h3>
+        <p>Yes, our game masters guide every team before starting.</p>
+      </div>
+
+      <div class="faq-card">
+        <h3>Are horror rooms scary?</h3>
+        <p>You can choose mystery or adventure themes if preferred.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="section" id="booking">
   <div class="container">
     <div class="section-head">
@@ -230,7 +441,7 @@
           <i data-lucide="map-pin"></i>
           <div>
             <h3>Location</h3>
-            <p>Nellore, Andhra Pradesh</p>
+            <p>Banglore, India</p>
           </div>
         </div>
 
@@ -238,7 +449,7 @@
           <i data-lucide="clock"></i>
           <div>
             <h3>Hours</h3>
-            <p>10:00 AM – 10:00 PM</p>
+            <p>10:00 AM – 11:00 PM</p>
           </div>
         </div>
       </div>
@@ -295,10 +506,25 @@
       </p>
 
       <div class="footer-socials">
-        <a href="#"><i data-lucide="instagram"></i></a>
-        <a href="#"><i data-lucide="twitter"></i></a>
-        <a href="#"><i data-lucide="youtube"></i></a>
-        <a href="#"><i data-lucide="facebook"></i></a>
+        <div class="footer-socials">
+
+  <a href="#">
+    <i class="bi bi-facebook"></i>
+  </a>
+
+  <a href="#">
+    <i class="bi bi-instagram"></i>
+  </a>
+
+  <a href="#">
+    <i class="bi bi-twitter-x"></i>
+  </a>
+
+  <a href="#">
+    <i class="bi bi-youtube"></i>
+  </a>
+
+</div>
       </div>
 
     </div>
@@ -363,7 +589,13 @@
 
 </footer>
 
-<script src="script.js"></script>
+
+
+<script>
+  lucide.createIcons();
+</script>
+
+<script src="index.js"></script>
 
 <script>
   lucide.createIcons();

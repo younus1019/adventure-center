@@ -1,3 +1,14 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+
+
+
+
 :root{
   --primary:#dc2626;
   --secondary:#111111;
@@ -7,32 +18,27 @@
 
   --bg:#111111;
   --text:#ffffff;
-
   --card:#181818;
   --soft:#151515;
-
   --border:rgba(255,255,255,0.12);
 }
 
 /* LIGHT MODE */
-
 body.light{
   --bg:#ffffff;
   --text:#000000;
-
   --card:#ffffff;
   --soft:#f5f5f5;
-
   --border:rgba(0,0,0,0.12);
 }
 
 /* RTL */
-
 body.rtl{
   direction:rtl;
   text-align:right;
 }
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -69,7 +75,6 @@ img{
 }
 
 /* HEADER */
-
 header{
   position:fixed;
   top:0;
@@ -132,11 +137,14 @@ header{
   width:44px;
   height:44px;
   border-radius:50%;
-  border:1px solid rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.25);
   background:transparent;
   color:var(--white);
-  display:grid;
-  place-items:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12px;
+  font-weight:700;
   cursor:pointer;
   transition:.3s;
 }
@@ -146,12 +154,34 @@ header{
   border-color:var(--primary);
 }
 
+.icon-btn svg{
+  width:20px;
+  height:20px;
+  stroke:var(--white);
+}
+
+.rtl-toggle{
+  width:64px;
+  height:38px;
+  border-radius:6px;
+  border:1px solid var(--primary);
+  color:var(--primary);
+  background:transparent;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.rtl-toggle:hover{
+  background:var(--primary);
+  color:var(--white);
+}
+
 .hamburger{
   display:none;
 }
 
 /* BUTTONS */
-
 .btn{
   height:46px;
   padding:0 24px;
@@ -186,21 +216,26 @@ header{
 }
 
 /* HERO */
-
 .hero{
   min-height:100vh;
   display:flex;
   align-items:center;
   padding-top:90px;
-
   background:
   linear-gradient(90deg,rgba(17,17,17,.96),rgba(17,17,17,.55)),
   url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80");
-
   background-size:cover;
   background-position:center;
-
   color:var(--white);
+}
+
+body.light .hero{
+  background:
+  linear-gradient(90deg,rgba(255,255,255,.78),rgba(255,255,255,.45)),
+  url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  color:var(--black);
 }
 
 .hero-grid{
@@ -232,6 +267,10 @@ header{
   max-width:620px;
 }
 
+body.light .hero p{
+  color:#222;
+}
+
 .hero-actions{
   display:flex;
   gap:16px;
@@ -251,6 +290,11 @@ header{
   backdrop-filter:blur(15px);
 }
 
+body.light .timer-card{
+  background:rgba(255,255,255,.6);
+  border:1px solid rgba(0,0,0,.12);
+}
+
 .timer-inner{
   text-align:center;
 }
@@ -268,7 +312,6 @@ header{
 }
 
 /* MARQUEE */
-
 .marquee{
   background:var(--primary);
   color:var(--white);
@@ -296,14 +339,16 @@ header{
   }
 }
 
-/* SECTIONS */
-
+/* COMMON SECTIONS */
 .section{
   padding:90px 0;
+  background:var(--bg);
 }
 
 .rooms,
-.pricing{
+.pricing,
+.testimonials,
+.faq-section{
   background:var(--soft);
 }
 
@@ -324,7 +369,6 @@ header{
 }
 
 /* ROOMS */
-
 .room-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -356,9 +400,7 @@ header{
   bottom:0;
   padding:28px;
   color:var(--white);
-
-  background:
-  linear-gradient(transparent,rgba(0,0,0,.92));
+  background:linear-gradient(transparent,rgba(0,0,0,.92));
 }
 
 .difficulty{
@@ -379,8 +421,36 @@ header{
   margin-bottom:18px;
 }
 
-/* ABOUT */
+/* STATS */
+.stats-section{
+  background:var(--secondary);
+}
 
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.stat-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:35px 20px;
+  text-align:center;
+}
+
+.stat-card h2{
+  font-size:42px;
+  color:var(--primary);
+  margin-bottom:10px;
+}
+
+.stat-card p{
+  opacity:.75;
+}
+
+/* ABOUT */
 .experience-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -420,8 +490,68 @@ header{
   margin-top:6px;
 }
 
-/* PRICING */
+/* HOW IT WORKS */
+.how-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
 
+.how-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:35px;
+  text-align:center;
+}
+
+.step{
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background:var(--primary);
+  color:var(--white);
+  display:grid;
+  place-items:center;
+  margin:auto auto 22px;
+  font-size:22px;
+  font-weight:700;
+}
+
+.how-card p{
+  margin-top:12px;
+  line-height:1.8;
+  opacity:.75;
+}
+
+/* TESTIMONIALS */
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.testimonial-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:35px;
+}
+
+.testimonial-card p{
+  line-height:1.9;
+  opacity:.8;
+}
+
+.user{
+  margin-top:25px;
+}
+
+.user span{
+  color:var(--primary);
+}
+
+/* PRICING */
 .pricing-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -469,8 +599,27 @@ header{
   opacity:.75;
 }
 
-/* BOOKING */
+/* FAQ */
+.faq-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
 
+.faq-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:30px;
+}
+
+.faq-card p{
+  margin-top:12px;
+  line-height:1.8;
+  opacity:.75;
+}
+
+/* BOOKING */
 .booking-grid{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
@@ -532,12 +681,11 @@ header{
   width:100%;
 }
 
-
-
+/* FOOTER */
 .footer{
   background:#080808;
   padding-top:70px;
-  color:white;
+  color:var(--white);
   border-top:1px solid rgba(220,38,38,.2);
 }
 
@@ -559,7 +707,7 @@ header{
   width:42px;
   height:42px;
   border-radius:12px;
-  background:#dc2626;
+  background:var(--primary);
   display:grid;
   place-items:center;
   font-weight:700;
@@ -593,7 +741,7 @@ header{
 }
 
 .footer-socials a:hover{
-  background:#dc2626;
+  background:var(--primary);
 }
 
 .footer-links{
@@ -617,7 +765,7 @@ header{
   bottom:-10px;
   width:35px;
   height:2px;
-  background:#dc2626;
+  background:var(--primary);
 }
 
 .footer-column a,
@@ -630,7 +778,7 @@ header{
 }
 
 .footer-column a:hover{
-  color:#dc2626;
+  color:var(--primary);
 }
 
 .footer-bottom{
@@ -655,26 +803,98 @@ header{
 }
 
 .bottom-links a:hover{
-  color:#dc2626;
+  color:var(--primary);
 }
 
 /* RESPONSIVE */
-
 @media(max-width:992px){
 
+  .nav-links,
+  .desktop-cta{
+    display:none;
+  }
+
+  .hamburger{
+    display:flex;
+  }
+
+  .nav-links.active{
+    display:flex;
+    position:absolute;
+    top:78px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    background:var(--secondary);
+    padding:25px;
+  }
+
+  .hero-grid,
+  .experience-grid,
+  .booking-grid,
   .footer-container{
     grid-template-columns:1fr;
+  }
+
+  .timer-card{
+    margin:auto;
+  }
+
+  .room-grid,
+  .pricing-grid,
+  .stats-grid,
+  .how-grid,
+  .testimonial-grid,
+  .faq-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
   .footer-links{
     grid-template-columns:repeat(2,1fr);
   }
+
+  .hero h1{
+    font-size:48px;
+  }
 }
 
 @media(max-width:650px){
 
+  .section{
+    padding:65px 0;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .section-head h2,
+  .experience-grid h2{
+    font-size:32px;
+  }
+
+  .room-grid,
+  .pricing-grid,
+  .stats-grid,
+  .how-grid,
+  .testimonial-grid,
+  .faq-grid,
+  .form-row,
   .footer-links{
     grid-template-columns:1fr;
+  }
+
+  .price-card.popular{
+    transform:scale(1);
+  }
+
+  .timer-card{
+    width:280px;
+    height:280px;
+  }
+
+  .timer{
+    font-size:45px;
   }
 
   .footer-bottom{
@@ -684,41 +904,49 @@ header{
   }
 }
 
-.icon-btn svg{
-  width:20px;
-  height:20px;
-  stroke:white;
-  color:white;
+
+body.light{
+  --bg:#ffffff;
+  --text:#000000;
+  --card:#ffffff;
+  --soft:#f5f5f5;
 }
 
-.icon-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
+/* LIGHT MODE HEADER */
+body.light header{
+  background:#ffffff;
+  border-bottom:1px solid rgba(0,0,0,0.12);
 }
 
-.icon-btn:hover svg{
-  stroke:white;
+body.light .logo,
+body.light .nav-links a,
+body.light .icon-btn{
+  color:#000000;
 }
 
-.icon-btn{
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.25);
-  background:transparent;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:12px;
-  font-weight:700;
-  cursor:pointer;
+body.light .icon-btn{
+  border-color:rgba(0,0,0,0.18);
 }
 
-.icon-btn svg{
-  width:20px;
-  height:20px;
-  stroke:white;
+body.light .icon-btn svg{
+  stroke:#000000;
+}
+
+/* LIGHT MODE FOOTER */
+body.light .footer{
+  background:#ffffff;
+  color:#000000;
+  border-top:1px solid rgba(0,0,0,0.12);
+}
+
+body.light .footer-brand p,
+body.light .footer-column a,
+body.light .footer-column p,
+body.light .footer-bottom p,
+body.light .bottom-links a{
+  color:#000000;
+}
+
+body.light .footer-bottom{
+  border-top:1px solid rgba(0,0,0,0.12);
 }
